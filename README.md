@@ -1,4 +1,4 @@
-# vmix-scripting
+# vMix Assets
 
 Fala galera, aqui nesse repositório você vai encontrar tudo que já mostrei
 ou falei no YouTube ou em algum bate papo nosso por aí.
