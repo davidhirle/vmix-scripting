@@ -1,0 +1,44 @@
+'      vMix Multiview Status
+'       SEU EVENTO . LIVE
+'    criado por David Hirle
+'       (31) 9 9195-7275
+
+Do     
+' Cria variável do XML e carrega o arquivo XML da API do vMix
+dim VmixXML as new system.xml.xmldocument
+VmixXML.loadxml(API.XML)
+
+' Define variáveis que serão utilizadas durante o script
+dim Meta As XmlNode = VmixXML.selectSingleNode("/vmix/inputs/input[@title=""likecounter.gtzip""]/text[@index=""4""]")
+dim IntegerMeta As Integer = Meta.InnerText
+dim Likes As XmlNode = VmixXML.selectSingleNode("/vmix/inputs/input[@title=""likecounter.gtzip""]/text[@index=""0""]")
+dim IntegerLikes As Integer = Likes.InnerText
+dim Result as Double
+
+' Regra de 3 para resultado porcentagem de likes
+Result = (IntegerLikes*100)\IntegerMeta
+
+' Arredondamento para 100% caso o número de likes passe da meta
+If Result > 100 Then
+    Result = 100
+end If
+
+' Coverte o a variáveis Result de Double para String
+dim ResultString As String = Result
+
+' Define e cria a variável string ProgressBar para o caminho onde a imagem está com o resultado da regra de 3
+dim ProgressBar As String =  "C:\Users\David Hirle\Desktop\CAMPORI\progresso\progresso (" + ResultString + ").png"
+
+' Atualiza o Title com a imagem da porcentagem
+API.Function("SetImage", "likecounter.gtzip", ProgressBar, 100, "ProgressBar.Source")
+
+' Define, cria e concatena a variável com a porcentagem
+dim ResultConcat as String = Result
+ResultConcat &= "%"
+
+' Atualiza o Title com o texto da porcentagem
+Input.Find("likecounter.gtzip").Text("Resultado.Text")= ResultConcat
+
+Sleep(1000)
+
+Loop While True
