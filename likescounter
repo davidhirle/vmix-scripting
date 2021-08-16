@@ -1,2 +1,0 @@
-#Visualizações simultâneas do vídeo do vídeo
-https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=IDDOVIDEOAQUI&fields=items/liveStreamingDetails/concurrentViewers&key=APIKEYDOYOUTUBEAQUI
