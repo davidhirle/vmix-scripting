@@ -4,7 +4,7 @@
 '       (31) 9 9195-7275
 
 While True
-    dim VmixXML as new system.xml.xmldocumentw
+    dim VmixXML as new system.xml.xmldocument
     VmixXML.loadxml(API.XML)
 
     dim ActiveNumber As XmlNode = VmixXML.selectSingleNode("/vmix/active")
