@@ -1,1 +1,1 @@
-https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=IDDOVIDEOAQUI&fields=items/liveStreamingDetails/concurrentViewers&key=AIzaSyCjWWxzsJTA-RRqwEKTahB_RV_s8vZTB7c
+https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=IDDOVIDEOAQUI&fields=items/liveStreamingDetails/concurrentViewers&key=APIKEYAQUI
