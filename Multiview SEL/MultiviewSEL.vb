@@ -102,13 +102,5 @@ else
     end If
 end If
 
-
-' Define o intervalo 
-Sleep(0)
-
-' Cria repetição do script
+' Encerra repetição do script
 Loop While True
-
-
-'Console.WriteLine("Está Transmitindo")
-'Console.WriteLine(Live.InnerText)
